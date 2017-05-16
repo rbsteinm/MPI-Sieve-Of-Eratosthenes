@@ -2,7 +2,7 @@ This is a parallel implementation of the sieve of Eratosthenes using MPI
 
 ### running the code
 
-* To compile the code: mpicc erato_parallel.cpp -lm -o erato
+* To compile the code: mpicc erato_parallel.cpp -lm -lstdc++ -o erato
 
 * To run the code: mpirun -np < p > ./erato < n > < DEBUG >
 

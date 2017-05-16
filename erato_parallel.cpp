@@ -18,6 +18,7 @@ int main(int argc, char* argv[]) {
     MPI_Init(&argc, &argv); // Initialize the MPI environment
     MPI_Comm_size(MPI_COMM_WORLD, &p); // Get the number of processes
     MPI_Comm_rank(MPI_COMM_WORLD, &rank); // Get the rank of the process
+    double time = MPI_Wtime();
 
     if(argc == 3) DEBUG = atoi(argv[2]);
     else if(!(argc == 2)){
@@ -41,7 +42,8 @@ int main(int argc, char* argv[]) {
 
     // initialize the array for this thread
     // note that in proc0 the elem at index 0 is 2 (we ignore 0 and 1)
-    bool array[size];
+    //bool array[size];
+    bool *array = new bool[size];
     for(int i = 0; i < size; i++){
         array[i] = true; // first every element is marked as prime
     }
@@ -96,8 +98,12 @@ int main(int argc, char* argv[]) {
     MPI_Reduce (&local_sum, &global_sum, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
 
     if(rank == 0){
-        printf("There are %d prime numbers under %d.", global_sum, n);
+        printf("There are %d prime numbers under %d. \n", global_sum, n);
+        time = MPI_Wtime() - time;
+        printf("The algorithm took %f seconds to execute \n", time);
     }
+    // free memory
+    delete(array);
 
 
     // Finalize the MPI environment.
