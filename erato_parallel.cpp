@@ -98,9 +98,14 @@ int main(int argc, char* argv[]) {
     MPI_Reduce (&local_sum, &global_sum, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
 
     if(rank == 0){
-        printf("There are %d prime numbers under %d. \n", global_sum, n);
         time = MPI_Wtime() - time;
-        printf("The algorithm took %f seconds to execute \n", time);
+        if(DEBUG){
+            printf("p=%d, n=%d \n",p,n);
+            printf("%d elements per thread\n", size+1);
+            printf("There are %d prime numbers under %d. \n", global_sum, n);
+            printf("The algorithm took %f seconds to execute \n\n", time);
+        }
+        else printf("n=%d p=%d t=%f \n", n, p, time);
     }
     // free memory
     delete(array);
