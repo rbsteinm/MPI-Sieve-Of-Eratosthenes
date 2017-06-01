@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 #SBATCH --reservation phpc2017
 #SBATCH --account phpc2017
 #SBATCH --time 00:15:00
@@ -23,20 +23,3 @@ do
 	   srun -n $i ./erato $n
 	done
 done
-
-'
-echo "Weak Scaling: "
-#number of problems per process
-ppps=(10000 20000 30000)
-ps=(1 2 3)
-for i in "${ppps[@]}"
-do
-	:
-	for j in "${ps[@]}"
-	do
-		:
-		n=$((${i}*${j}))
-		mpirun -np $j ./erato $n
-	done
-done
-'
