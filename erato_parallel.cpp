@@ -35,7 +35,7 @@ int main(int argc, char* argv[]) {
         if(rank == 1) printf("Error: expected 1 or 2 arguments but got %d \n", argc-1);
         exit(1);
     }
-    n = atoi(argv[1]);
+    n = atol(argv[1]);
 
     // we must have that n/p > sqrt(n) to ensure that the next value of k is always in proc 0
     if(!(n/p > sqrt(n))){
