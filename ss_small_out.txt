@@ -1,0 +1,15 @@
+Strong Scaling: 
+n=1000 p=1 t=0.000077 
+n=1000 p=2 t=0.000290 
+n=1000 p=4 t=0.000152 
+n=1000 p=8 t=0.000201 
+n=1000 p=16 t=0.000344 
+Error: there are too many processes! 
+Error: there are too many processes! 
+n=100000 p=1 t=0.002918 
+n=100000 p=2 t=0.001122 
+n=100000 p=4 t=0.000990 
+n=100000 p=8 t=0.000973 
+n=100000 p=16 t=0.001379 
+n=100000 p=32 t=0.001720 
+n=100000 p=64 t=0.008660 

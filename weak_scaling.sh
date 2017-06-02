@@ -1,7 +1,6 @@
 #!/bin/bash
 #SBATCH --reservation phpc2017
 #SBATCH --account phpc2017
-#SBATCH --time 00:15:00
 
 # load the correct modules for the cluster
 module load gcc
