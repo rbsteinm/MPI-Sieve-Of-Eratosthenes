@@ -12,7 +12,7 @@ mpicc erato_parallel.cpp -lm -lstdc++ -o erato
 
 echo "Weak Scaling: "
 #number of problems per process
-ppps=(10000 20000 30000)
+ppps=(1000 100000 1000000)
 ps=(1 2 3)
 for i in "${ppps[@]}"
 do
