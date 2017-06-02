@@ -1,109 +1,74 @@
 [rbsteinm@bellatrix repo]$ bash strong_scaling.sh
 Strong Scaling:
-srun: job 1285830 queued and waiting for resources
-srun: job 1285830 has been allocated resources
+n=100000 p=1 t=0.002918 
+n=100000 p=2 t=0.001122 
+n=100000 p=4 t=0.000990 
+n=100000 p=8 t=0.000973 
+n=100000 p=16 t=0.001379 
+n=100000 p=32 t=0.001720 
+n=100000 p=64 t=0.008660
+
+n=10000000 p=1 t=0.199412 
+n=10000000 p=2 t=0.099032 
+n=10000000 p=4 t=0.056092 
+n=10000000 p=8 t=0.028126 
+n=10000000 p=16 t=0.019049 
+n=10000000 p=32 t=0.008377 
+n=10000000 p=64 t=0.022424
+
+n=20000000 p=1 t=0.546185 
+n=20000000 p=2 t=0.205488 
+n=20000000 p=4 t=0.142231 
+n=20000000 p=8 t=0.077312 
+n=20000000 p=16 t=0.030823 
+n=20000000 p=32 t=0.015851 
+n=20000000 p=64 t=0.009112
+
 n=50000000 p=1 t=2.679413
 n=50000000 p=2 t=0.859940
-srun: job 1285832 queued and waiting for resources
-srun: job 1285832 has been allocated resources
 n=50000000 p=4 t=0.533686
-srun: job 1285835 queued and waiting for resources
-srun: job 1285835 has been allocated resources
 n=50000000 p=8 t=0.407817   
 n=50000000 p=16 t=0.192102
-srun: job 1285837 queued and waiting for resources
-srun: job 1285837 has been allocated resources
 n=50000000 p=32 t=0.039683
-srun: job 1285838 queued and waiting for resources
-srun: job 1285838 has been allocated resources
 n=50000000 p=64 t=0.025487
-srun: job 1285841 queued and waiting for resources
-srun: job 1285841 has been allocated resources
+
 n=100000000 p=1 t=6.322764
-srun: job 1285842 queued and waiting for resources
-srun: job 1285842 has been allocated resources
 n=100000000 p=2 t=2.628261
-srun: job 1285843 queued and waiting for resources
-srun: job 1285843 has been allocated resources
 n=100000000 p=4 t=1.784132
-srun: job 1285844 queued and waiting for resources
-srun: job 1285844 has been allocated resources
 n=100000000 p=8 t=0.725338
 n=100000000 p=16 t=0.443683
-srun: job 1285848 queued and waiting for resources
-srun: job 1285848 has been allocated resources
 n=100000000 p=32 t=0.157159
-srun: job 1285851 queued and waiting for resources
-srun: job 1285851 has been allocated resources
 n=100000000 p=64 t=0.054078
+
 n=200000000 p=1 t=13.925948
-srun: job 1285853 queued and waiting for resources
-srun: job 1285853 has been allocated resources
 n=200000000 p=2 t=6.179890
-srun: job 1285854 queued and waiting for resources
-srun: job 1285854 has been allocated resources
 n=200000000 p=4 t=4.056988
-srun: job 1285858 queued and waiting for resources
-srun: job 1285858 has been allocated resources
 n=200000000 p=8 t=2.367317
 n=200000000 p=16 t=0.964095
-srun: job 1285861 queued and waiting for resources
-srun: job 1285861 has been allocated resources
 n=200000000 p=32 t=0.435021
 n=200000000 p=64 t=0.144944
-srun: job 1285863 queued and waiting for resources
-srun: job 1285863 has been allocated resources
+
 n=500000000 p=1 t=37.929572
 n=500000000 p=2 t=17.382783
-srun: job 1285865 queued and waiting for resources
-^[[A^[[srun: job 1285865 has been allocated resources
 n=500000000 p=4 t=9.368903
-srun: job 1285867 queued and waiting for resources
-srun: job 1285867 has been allocated resources
 n=500000000 p=8 t=5.057039
-srun: job 1285868 queued and waiting for resources
-srun: job 1285868 has been allocated resources
 n=500000000 p=16 t=2.681315
-srun: job 1285869 queued and waiting for resources
-srun: job 1285869 has been allocated resources
 n=500000000 p=32 t=1.296199
-srun: job 1285871 queued and waiting for resources
-srun: job 1285871 has been allocated resources
 n=500000000 p=64 t=0.618013
-srun: job 1285883 queued and waiting for resources
-srun: job 1285883 has been allocated resources
+
 n=1000000000 p=1 t=79.260680
-srun: job 1285884 queued and waiting for resources
-srun: job 1285884 has been allocated resources
 n=1000000000 p=2 t=36.730777
-srun: job 1285886 queued and waiting for resources
-srun: job 1285886 has been allocated resources
 n=1000000000 p=4 t=19.835741
 n=1000000000 p=8 t=13.918355
-srun: job 1285889 queued and waiting for resources
-srun: job 1285889 has been allocated resources
 n=1000000000 p=16 t=5.634328
-srun: job 1285890 queued and waiting for resources
-srun: job 1285890 has been allocated resources
 n=1000000000 p=32 t=2.806752
-srun: job 1285894 queued and waiting for resources
-        srun: job 1285894 has been allocated resources
 n=1000000000 p=64 t=1.466967
+
 n=2000000000 p=1 t=249.665563
-srun: job 1285903 queued and waiting for resources
-srun: job 1285903 has been allocated resources
 n=2000000000 p=2 t=76.816287
 n=2000000000 p=4 t=40.753218
-srun: job 1285908 queued and waiting for resources
-srun: job 1285908 has been allocated resources
 n=2000000000 p=8 t=21.469591
-srun: job 1285909 queued and waiting for resources
-srun: job 1285909 has been allocated resources
 n=2000000000 p=16 t=11.714371
-srun: job 1285913 queued and waiting for resources
-srun: job 1285913 has been allocated resources
 n=2000000000 p=32 t=5.867563
-srun: job 1285914 queued and waiting for resources
-srun: job 1285914 has been allocated resources
 n=2000000000 p=64 t=2.892470
 [rbsteinm@bellatrix repo]$
