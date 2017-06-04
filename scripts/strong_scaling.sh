@@ -20,7 +20,6 @@ do
 	for i in "${ps[@]}"
 	do
 	   :
-	   #mpirun -np $i ./erato $n
 	   srun -n $i ./erato $n
 	done
 done

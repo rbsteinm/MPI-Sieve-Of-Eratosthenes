@@ -1,4 +1,5 @@
-def get_data(path):
+# extract the data from the batch output file
+def get_data(path, weak=False):
 
     ns = []
     ps = []
@@ -30,15 +31,19 @@ def get_data(path):
             ns.append(int(n))
             ps.append(int(p))
             ts.append(float(t))
-    elems_per_n = int(len(ts) / len(set(ns)))
-    print(elems_per_n)
-    #print(len(set(ns)))
-    #print(len(ts))
+    if weak:
+        # get the number of problems per process
+        ppps = []
+        for i in range(len(ns)):
+            ppps.append(ns[i]/ps[i])
+            #print("n: " + str(ns[i]) + " flat_p: " + str(flat_ps[i]))
+        ppps = sorted(list(set(ppps)))
+        elems_per_n = int(int(len(ts))/len(ppps))
+
+    else:
+        elems_per_n = int(len(ts) / len(set(ns)))
     ps_groups = [ps[i:i + elems_per_n] for i in range(0, len(ps), elems_per_n)]
     ts_groups = [ts[i:i + elems_per_n] for i in range(0, len(ts), elems_per_n)]
-    #print(ts_groups)
-    print(set(ns))
-
-    return sorted(list(set(ns))), ps_groups, ts_groups
+    return ns, ps_groups, ts_groups
 
 #get_data("./data_strong.txt")
